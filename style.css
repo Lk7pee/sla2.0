@@ -1,0 +1,322 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+  margin: 0;
+  padding: 0;
+  color: #5c2c3d;
+}
+
+
+header {
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffe4e1;
+  border-bottom: 2px dashed #ff69b4;
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #ff1493;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #a0526d;
+}
+
+
+.botao-imagem-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+}
+
+#botao-surpresa {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.imagem-fofa {
+  width: 180px;
+  border-radius: 20px;
+}
+
+.musicas {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.musica-bloco {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.musica-bloco:hover {
+  transform: scale(1.03);
+}
+
+.musica-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+
+footer {
+  padding: 2rem;
+  background-color: #ffe4e1;
+  font-size: 1.2rem;
+  color: #db7093;
+  text-align: center;
+  font-style: italic;
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90vw;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: #ff69b4;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.botoes-resposta button,
+#quiz-form button,
+#repetir-quiz {
+  margin: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#abrir-carrossel {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 2rem auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#foto-carrossel {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  margin: 1rem auto;
+}
+
+.carrossel-controles button {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#botao-quiz {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#mensagem-fofa {
+  font-size: 1.2rem;
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.carrossel-imagens {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.carrossel-foto {
+  display: none;
+  width: 100%;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carrossel-foto.ativa {
+  display: block;
+  position: relative;
+}
+
+#quiz-popup .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #fff0f5;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+}
+
+#quiz-form p {
+  font-weight: bold;
+  color: #db7093;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+#quiz-form label {
+  display: block;
+  background-color: #fff;
+  border: 2px solid #ffb6c1;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#quiz-form label:hover {
+  background-color: #ffe4e1;
+}
+
+
+#quiz-form input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+#quiz-form button[type="submit"],
+#repetir-quiz {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+#quiz-form button:hover,
+#repetir-quiz:hover {
+  background-color: #ff1493;
+}
+
+#resultado {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #c71585;
+  font-weight: bold;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#quiz-popup .modal-content {
+  animation: fadeInUp 0.5s ease;
+}
+
+#quiz-popup .modal-content {
+  max-height: 80vh; /* altura máxima da tela */
+  overflow-y: auto; /* ativa rolagem vertical */
+  scroll-behavior: smooth;
+}
+
+#quiz-form {
+  transition: opacity 0.4s ease;
+}
+#quiz-form.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+

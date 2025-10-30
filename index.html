@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surpresa pra Você 💘</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Oi, meu amor! 💖</h1>
+    <p>Esse site é só pra você. Uma surpresa feita com carinho, pra te lembrar o quanto você é especial pra mim.</p>
+  </header>
+
+  <section class="surpresa">
+    <div class="botao-imagem-container">
+      <button id="botao-surpresa">Clique aqui 💘</button>
+      <img src="https://i.pinimg.com/originals/7a/c4/bf/7ac4bfcb3c37fe7c6bd14d17941e5f4d.png" alt="Personagem fofo" class="imagem-fofa" />
+    </div>
+  </section>
+
+  <section class="musicas">
+    <div class="musica-bloco esquerda">
+      <img src="https://pngfre.com/wp-content/uploads/hello-kitty-56.png" alt="Hello Kitty" class="musica-icon" />
+      <iframe src="https://open.spotify.com/embed/track/1DLKuppSYytOuxhtI6KBGu?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <div class="musica-bloco direita">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.1qekU0Ul0nnb9x0Lqo-ZPAHaKe?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Spider-Man" class="musica-icon" />
+      <iframe src="https://open.spotify.com/embed/track/6fPALIGFkjmlHKuiiZLRl6?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <button id="abrir-carrossel">Nossos Momentos 💘</button>
+
+  <footer>
+    <div id="mensagem-fofa"></div>
+  </footer>
+
+  <!-- Modal Surpresa -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="fechar" id="fechar-modal">×</span>
+      <h2>Você me ama? 💖</h2>
+      <div class="botoes-resposta">
+        <button onclick="responder('Sim')">Sim</button>
+        <button onclick="responder('Claro!')">Claro!</button>
+      </div>
+      <div id="mensagem-final" class="hidden">
+        <h3>Eu também te amo muito! ❤️</h3>
+        <p>Você é tudo pra mim. Obrigado por estar comigo!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carrossel -->
+<div id="carrossel-popup" class="modal hidden">
+  <div class="modal-content">
+    <span id="fechar-carrossel" class="fechar">×</span>
+    <div class="carrossel-imagens">
+      <img src="imagens/foto1.jpg" class="carrossel-foto ativa" />
+      <img src="imagens/foto2.jpg" class="carrossel-foto" />
+      <img src="imagens/foto3.jpg" class="carrossel-foto" />
+      <img src="imagens/foto4.jpg" class="carrossel-foto" />
+      <img src="imagens/foto5.jpg" class="carrossel-foto" />
+      <img src="imagens/foto6.jpg" class="carrossel-foto" />
+      <img src="imagens/foto7.jpg" class="carrossel-foto" />
+      <img src="imagens/foto8.jpg" class="carrossel-foto" />
+      <img src="imagens/foto9.jpg" class="carrossel-foto" />
+      <img src="imagens/foto10.jpg" class="carrossel-foto" />
+      <img src="imagens/foto11.jpg" class="carrossel-foto" />
+    </div>
+    <div class="carrossel-controles">
+      <button id="anterior">←</button>
+      <button id="proximo">→</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Quiz -->
+  <button id="botao-quiz">💭</button>
+  <div id="quiz-popup" class="modal hidden">
+    <div class="modal-content">
+      <span id="fechar-quiz">×</span>
+      <form id="quiz-form">
+        <p>Qual o dia que a gente se conheceu?</p>
+        <label><input type="radio" name="q1" value="errado" /> 20/08/2025</label>
+        <label><input type="radio" name="q1" value="errado" /> 21/08/2025</label>
+        <label><input type="radio" name="q1" value="correto" /> 22/08/2025</label>
+        <label><input type="radio" name="q1" value="errado" /> 09/10/2025</label>
+
+        <p>Qual a minha cor favorita?</p>
+        <label><input type="radio" name="q2" value="correto" /> Vermelho</label>
+        <label><input type="radio" name="q2" value="errado" /> Azul</label>
+        <label><input type="radio" name="q2" value="errado" /> Verde</label>
+        <label><input type="radio" name="q2" value="errado" /> Rosa</label>
+
+        <p>Pra onde eu quero te levar pra viajar?</p>
+        <label><input type="radio" name="q3" value="errado" /> Itália e Rússia</label>
+        <label><input type="radio" name="q3" value="correto" /> Itália e Gramado</label>
+        <label><input type="radio" name="q3" value="errado" /> Grécia e França</label>
+        <label><input type="radio" name="q3" value="errado" /> Rio de Janeiro e São Paulo</label>
+
+        <p>Qual nome ou apelido eu odeio ser chamado por você?</p>
+        <label><input type="radio" name="q4" value="correto" /> Todas as opções</label>
+        <label><input type="radio" name="q4" value="errado" /> Filipe</label>
+        <label><input type="radio" name="q4" value="errado" /> divo</label>
+        <label><input type="radio" name="q4" value="errado" /> divônico</label>
+
+        <p>De 0 a 10 o quanto você me ama?</p>
+        <label><input type="radio" name="q5" value="errado" /> 0</label>
+        <label><input type="radio" name="q5" value="errado" /> 5</label>
+        <label><input type="radio" name="q5" value="errado" /> 9</label>
+        <label><input type="radio" name="q5" value="correto" /> 10</label>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="resultado" class="hidden"></div>
+      <button id="repetir-quiz" class="hidden">Refazer Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
