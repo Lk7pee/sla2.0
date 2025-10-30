@@ -1,0 +1,57 @@
+.musicas-container {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff0f5;
+}
+
+.musicas-container h2 {
+  color: #db7093;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.musicas-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.musica-bloco {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.musica-bloco:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .musicas-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .musica-bloco {
+    max-width: 90%;
+  }
+}
+
+
+.musica-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .musicas-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
